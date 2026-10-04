@@ -39,7 +39,7 @@ df = pd.read_csv(url)
 | `week06/` | 6 | FEMA disaster declarations | Single Parquet file. |
 | `week07/` | 7 | Surveillance technology dataset | Single CSV. |
 | `week08/` | 8 | AI incident/classification data | Two BSON files. |
-| `week09/` | 9 | Occupational employment statistics | Two large spreadsheets (used for a Pandas-vs-Polars performance comparison). |
+| `week09/` | 9 | Occupational employment statistics | Two large BLS OES releases (2013 and 2023), used for a Pandas-vs-Polars performance comparison. Converted from the original `.xlsx` to Parquet — `pd.read_excel` took ~113s per file; Parquet loads in well under a second with identical values (including the `*`/`**`/`#` suppression codes). |
 
 Week 10 has no dataset here by design — it's a student-chosen capstone dataset.
 
